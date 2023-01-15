@@ -1,56 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>涼小貓</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-</head>
-
-<body>
-    <div class='container'>
-        <div class='mb-2'>
-            <div class="card m-auto" style='width: 15rem;'>
-                <img src="./images/lian.jpg" class="card-img-top" alt="我的頭像">
-                <div class="card-body">
-                    <h5 class="card-title">涼小貓</h5>
-                    <p class="card-text">歡迎來到我的網站</p>
-                </div>
-            </div>
-        </div>
-        <hr />
-        <div class='row justify-content-center'>
-            <div class='col-sm-4 mb-2'>
-                <div class="card">
-                    <div class='card-header'>
-                        1015丙級練習
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text">自己的練習</p>
-                        <a href="https://lianbaby.github.io/1015pra/" class="btn btn-link btn-sm">Link</a>
-                    </div>
-                </div>
-            </div>
-            <div class='col-sm-4 mb-2'>
-                <div class="card">
-                    <div class='card-header'>
-                        1016丙級練習
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text">自己的練習</p>
-                        <a href="https://lianbaby.github.io/1016pra01/" class="btn btn-link btn-sm">Link</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>涼小貓</title>
+        <link rel="icon" href="./img/cat.png" type="image/x-icon" />
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+        <link rel="stylesheet" href="./css/index.css" />
+        <link rel="stylesheet" href="./css/scrollbar.css" />
+        <script src="./js/config.js"></script>
+        <script src="./js/utils.js"></script>
+        <script src="./js/weather-animation.js"></script>
+        <script src="./js/index.js"></script>
         
-    </div>
-    </div>
-    </div>
+    </head>
 
-</body>
+    <body class="index">
+        <div class="d-flex flex-column vh-100 container-fluid">
+            <div class="row">
+                <header class="col-md-10 col-12">
+                    <nav class="navbar navbar-expand-sm navbar-lightgary bar-color">
+                        <div class="container-fluid opacity-100">
+                            <a
+                                class="navbar-brand"
+                                href="page/profile.html"
+                                target="content"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="right"
+                                data-bs-custom-class="custom-tooltip"
+                                data-bs-title="回首頁"
+                            >
+                                <div class="logo"></div>
+                                <img src="./img/catH.png" alt="Lian's Page" />
+                            </a>
+                            <button
+                                class="navbar-toggler"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#menu"
+                                aria-controls="menu"
+                                aria-expanded="false"
+                                aria-label="Toggle navigation"
+                            >
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="menu">
+                                <ul class="navbar-nav ms-sm-auto">
+                                    <li class="nav-item">
+                                        <a
+                                            class="nav-link text-decoration-underline"
+                                            href="page/pg_collection.html"
+                                            target="content"
+                                            >程式作品集</a
+                                        >
+                                    </li>
+                                    <li class="nav-item">
+                                        <a
+                                            class="nav-link text-decoration-underline"
+                                            href="page/art_collection.html"
+                                            target="content"
+                                            >美工作品集</a
+                                        >
+                                    </li>
+                                    <li class="nav-item">
+                                        <a
+                                            class="nav-link text-decoration-underline"
+                                            href="page/skill.html"
+                                            target="content"
+                                            >技能優勢</a
+                                        >
+                                    </li>
+                                    <li class="nav-item">
+                                        <a
+                                            class="nav-link text-decoration-underline"
+                                            href="page/contact_me.html"
+                                            target="content"
+                                            >聯絡我</a
+                                        >
+                                    </li>
+                                    <li class="nav-item dropdown d-sm-none season">
+                                        <a
+                                            class="nav-link dropdown-toggle text-dark"
+                                            href="#"
+                                            role="button"
+                                            data-bs-toggle="dropdown"
+                                            aria-expanded="false"
+                                        >
+                                            季節變換
+                                        </a>
+                                        <ul class="dropdown-menu d-sm-none">
+                                            <li>
+                                                <a
+                                                    class="weather dropdown-item active"
+                                                    href="#"
+                                                    data-weather-key="SPRING"
+                                                    >春天</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a
+                                                    class="weather dropdown-item"
+                                                    href="#"
+                                                    data-weather-key="SUMMER"
+                                                    >夏天</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a
+                                                    class="weather dropdown-item"
+                                                    href="#"
+                                                    data-weather-key="AUTUMN"
+                                                    >秋天</a
+                                                >
+                                            </li>
+                                            <li>
+                                                <a
+                                                    class="weather dropdown-item"
+                                                    href="#"
+                                                    data-weather-key="WINTER"
+                                                    >冬天</a
+                                                >
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </header>
+            </div>
 
+            <main class="flex-grow-1 row d-flex flex-column">
+                <div class="row col-12 flex-grow-1 p-0 m-0">
+                    <div
+                        class="col-md-10 col-12 position-relative bg-white rounded-top"
+                    >
+                        <iframe name="content" class="w-100 h-100" src="page/profile.html" frameborder="0"></iframe>
+                    </div>
+                    <div
+                        class="col-md-2 align-items-center d-none d-md-flex justify-content-center flex-column py-2"
+                    >
+                        <div class="weather-marquee run align-self-center carousel slide w-100" data-bs-ride="carousel">
+                            <div class="content carousel-inner p-3">
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column justify-content-center w-100 align-items-center flex-grow-1">
+                            <button
+                                class="weather spring rounded-circle m-1 active flex-grow-1 w-100"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="left"
+                                data-bs-custom-class="custom-tooltip"
+                                data-bs-title="春天"
+                                data-weather-key="SPRING"
+                            ></button>
+                            <button
+                                class="weather summer rounded-circle m-1 flex-grow-1 w-100"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="left"
+                                data-bs-custom-class="custom-tooltip"
+                                data-bs-title="夏天"
+                                data-weather-key="SUMMER"
+                            ></button>
+                            <button
+                                class="weather autumn rounded-circle m-1 flex-grow-1 w-100"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="left"
+                                data-bs-custom-class="custom-tooltip"
+                                data-bs-title="秋天"
+                                data-weather-key="AUTUMN"
+                            ></button>
+                            <button
+                                class="weather winter rounded-circle m-1 flex-grow-1 w-100"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="left"
+                                data-bs-custom-class="custom-tooltip"
+                                data-bs-title="冬天"
+                                data-weather-key="WINTER"
+                            ></button>
+                        </div>
+                        <a
+                            role="button"
+                            href="page/profile.html"
+                            target="content"
+                            class="text-center"
+                        >
+                            <img
+                                data-bs-placement="left"
+                                data-bs-title="回首頁"
+                                src="./img/try.png"
+                                alt="Try"
+                                width="70%"
+                                class="p-2"
+                                data-bs-toggle="tooltip"
+                            />
+                        </a>
+                    </div>
+                </div>
+            </main>
+
+            <footer></footer>
+        </div>
+    </body>
 </html>

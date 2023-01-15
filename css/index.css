@@ -1,0 +1,470 @@
+:root {
+    --logo-width: 70px;
+    --logo-height: 70px;
+}
+
+body.index {
+    background-image: url(../img/spring.jpg);
+    background-size: 100% 100%;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+}
+
+main {
+    overflow: hidden;
+}
+
+main > [id].flex-grow-1 {
+    flex-basis: 0;
+}
+
+main .bg-white {
+    --bs-bg-opacity: .75;
+}
+
+.scrollbar-left {
+    direction: rtl;
+}
+
+.scrollbar-left > * {
+    direction: ltr;
+}
+
+.logo {
+    position: absolute;
+    border: 3px dashed peru;
+    width: var(--logo-width);
+    height: var(--logo-height);
+    border-radius: 100px;
+    animation: circle 20s linear 0s infinite;
+}
+
+.logo + img {
+    margin: 5px;
+    width: calc(var(--logo-width) - 10px);
+    height: calc(var(--logo-height) - 10px);
+}
+
+.rounded-top-right {
+    border-top-right-radius: 30px !important;
+}
+
+.rounded-top {
+    border-top-right-radius: 30px !important;
+    border-top-left-radius: 30px !important;
+}
+
+.z-index-n1 {
+    z-index: -1;
+}
+
+.w-85 {
+    width: 85%;
+}
+
+.w-15 {
+    width: 15%;
+}
+
+.season .dropdown-menu {
+    --bs-dropdown-bg: #ffffff75;
+    --bs-dropdown-link-active-bg: #132383ad;
+}
+
+button.weather {
+    max-width: 75px;
+    max-height: 75px;
+    background-size: cover;
+    opacity: 0.5;
+    box-shadow: 2px 2px 5px black;
+    transition: 300ms all linear;
+}
+
+button.weather.active {
+    opacity: 1;
+    filter: drop-shadow(2px 4px 6px black);
+}
+
+button.weather:hover {
+    opacity: 1;
+}
+
+/* 春天按鈕 */
+button.weather.spring {
+    background-image: url("../img/spring.jpg");
+}
+
+/* 夏天按鈕 */
+button.weather.summer {
+    background-image: url("../img/summer.jpg");
+}
+
+/* 秋天按鈕 */
+button.weather.autumn {
+    background-image: url("../img/Autumn.jpg");
+}
+
+/* 冬天按鈕 */
+button.weather.winter {
+    background-image: url("../img/winter.jpg");
+}
+
+.profile {
+    height: 80%;
+    max-height: 700px;
+    animation-name: profile;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+}
+
+.profile.stop {
+    animation: none;
+    box-shadow: 0;
+}
+
+.profile .card {
+    --bs-card-bg: rgba(255, 255, 255, 0.7);
+}
+
+.flop .back,
+.flop .front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: 0.4s transform linear;
+}
+
+.flop .back {
+    transform: scaleX(0);
+    transition-delay: 0.4s;
+}
+
+.flop:hover .back {
+    transform: scaleX(1);
+}
+
+.flop:not(:hover) .back {
+    transition-delay: 0s;
+}
+
+.flop:not(:hover) .front {
+    transition-delay: 0.4s;
+}
+
+.flop:hover .front {
+    transform: scaleX(0);
+}
+
+.profile .card.front {
+    background-image: url(../img/409651.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.profile .card.front .card-text {
+    --bs-bg-opacity: .7;
+}
+.profile .card.back {
+    --bs-bg-opacity: .8;
+}
+
+.profile .card.back .card-text {
+    line-height: 2;
+    line-break: anywhere;
+}
+
+.profile .card.back .card-text:before {
+    content: '';
+    margin-left: 2.5rem;
+}
+
+.message {
+    white-space: pre-line;
+    font-size: 24px;
+}
+
+[class^="leaf-"] {
+    background-size: 30px 30xp;
+}
+
+.leaf-1 {
+    background-image: url(../img/T1.png);
+}
+
+.leaf-2 {
+    background-image: url(../img/T2.png);
+}
+
+.leaf-3 {
+    background-image: url(../img/T3.png);
+}
+
+.leaf-4 {
+    background-image: url(../img/T3.png);
+}
+
+.m-animation {
+    position: fixed;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    opacity: 0.5;
+    background-size: 100% 100%;
+    z-index: -5;
+}
+
+.m-animation.autumn {
+    width: 20px;
+    height: 20px;
+    animation-name: top-down;
+    animation-duration: 10s;
+    background-image: url(../img/maple-leaf.png);
+    filter: drop-shadow(2px 2px 4px #0000008f);
+}
+
+.m-animation.winter {
+    width: 10px;
+    height: 10px;
+    animation-name: snow, top-down;
+    animation-duration: 15s;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 1px 1px #00000055;
+}
+
+.m-animation.spring {
+    width: 120px;
+    height: 120px;
+    opacity: 0.8;
+    left: 100%;
+    animation-name: cloud;
+    animation-duration: 50s;
+    background-image: url(../img/cloud.png);
+    filter: drop-shadow(2px 2px 4px #0000008f);
+}
+
+.m-animation.summer {
+    opacity: 0.8;
+    width: 80px;
+    height: 80px;
+    left: -80px;
+    top: 50%;
+    animation-name: ship;
+    animation-duration: 60s;
+    filter: drop-shadow(2px 2px 4px #0000008f);
+}
+
+#collection .card {
+    height: 300px;
+}
+
+#collection .card .card-img-top {
+    height: 120px;
+    width: 120px;
+}
+
+#collection .card .card-text {
+    display: -webkit-box;
+    overflow: hidden;
+    flex-basis: 0;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.spinner-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    --bs-bg-opacity: 0.7;
+    z-index: 1055;
+}
+
+.spinner-container > .spinner-grow:nth-child(1) {
+    --bs-spinner-animation-name: spinner-grow-1;
+}
+
+.spinner-container > .spinner-grow:nth-child(2) {
+    --bs-spinner-animation-name: spinner-grow-2;
+}
+
+.spinner-container > .spinner-grow:nth-child(3) {
+    --bs-spinner-animation-name: spinner-grow-3;
+}
+
+.oval {
+    border-radius: 100%;
+}
+
+@keyframes spinner-grow-1 {
+    0% {
+        transform: scale(0);
+    }
+    25% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes spinner-grow-2 {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes spinner-grow-3 {
+    0% {
+        transform: scale(0);
+    }
+    75% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes top-down {
+    from {
+        top: -30px;
+    }
+
+    to {
+        top: 100vh;
+        transform: translateX(300px);
+    }
+}
+
+@keyframes snow {
+    0% {
+        filter: blur(1px);
+    }
+
+    20% {
+        filter: blur(2px);
+    }
+
+    40% {
+        filter: blur(1px);
+    }
+
+    60% {
+        filter: blur(2px);
+    }
+
+    80% {
+        filter: blur(1px);
+    }
+
+    100% {
+        filter: blur(2px);
+    }
+}
+
+@keyframes ship {
+    0% {
+        left: -80px;
+    }
+
+    49% {
+        left: 80%;
+        transform: translateY(-6px) scale(0.8);
+        z-index: -5;
+    }
+
+    51% {
+        left: 80%;
+        transform: translateY(-8px) scale(0.7) rotateY(180deg);
+        z-index: -6;
+    }
+
+    100% {
+        left: -80px;
+        transform: translateY(-10px) scale(0.5) rotateY(180deg);
+        z-index: -7;
+    }
+}
+
+@keyframes cloud {
+    from {
+        left: 100%;
+    }
+    to {
+        left: -120px;
+    }
+}
+
+@keyframes circle {
+    0% {
+        transform: rotateZ(0);
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes profile {
+    0% {
+        transform: scale(1);
+        box-shadow: none;
+    }
+
+    50% {
+        transform: scale(1.01);
+        box-shadow: 0 0 2.5rem rgba(0, 0, 0, 0.3);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: none;
+    }
+}
+
+
+.text {
+    width: 100%;
+    /* text-align: center; */
+    height: 30px;
+    line-height: 1em;
+    font-size: 24px;
+}
+
+.text .content {
+    display: inline;
+}
+
+.text .dash {
+    margin-left: -5px;
+    display: inline-block;
+    height: 3px;
+    width: 15px;
+    background-color: #3498db;
+    animation: blink .5s infinite linear;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    99% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.weather-marquee .content {
+    font-size: .8rem;
+    backdrop-filter: blur(5px);
+}

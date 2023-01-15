@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聯絡我</title>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/scrollbar.css" />
+    <script src="../js/utils.js"></script>
+    <script src="../js/contact_me.js"></script>
+    <style>
+        .map {
+            width: 600px;
+            height: 400px;
+        }
+
+        @media screen and (max-width: 700px) {
+            .map {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body class="bg-transparent">
+    <div class="d-flex flex-column container-fluid h-100 justify-content-center scrollbar-left scrollbar-rare-wind py-4" style="overflow-x: hidden">
+        <div class="d-flex flex-column h-100">
+            <div class="row">
+                <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="../page/profile.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">聯絡我</li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="row gx-2 justify-content-center">
+                <div class="text-center col-sm-12 col-md-auto mb-3">
+                    <div class="map position-relative">
+                        <iframe onload="onMapLoaded();" class="w-100 h-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.7021523244125!2d121.41729491500641!3d25.044180083967568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a7bed3dc9b59%3A0x57e6439a2db0fa2a!2zMjQz5paw5YyX5biC5rOw5bGx5Y2A6LK05a2Q6YeM6Ie06YGg5paw5p2RNTXkuYsx6Jmf5rOw5bGx6IG36KiT5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1672282202572!5m2!1szh-TW!2stw" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="col-md-auto d-flex">
+                    <div class="my-auto px-2">
+                        <h1>泰山職訓中心</h1>
+                        <ul>
+                            <li><strong>電話：</strong>4302新北市泰山區貴子里致遠新村55之1號</li>
+                            <li><strong>地址：</strong>02-2901-8274</li>
+                            <li><strong>傳真：</strong>02-2908-4773</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-auto p-3">
+                <a class="btn btn-link" href="../page/profile.html">back</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
